@@ -1,13 +1,10 @@
-This is my gCamp
+README
 
-There are many like it
-
-But this one is mine
-
+===
+WIP
 
 <br />
 Heroku App
-https://protected-brushlands-4153.herokuapp.com/
 <br />
 [GitTristan's Travis CI](https://travis-ci.org/GitTristan/gCamp)  
 <br />

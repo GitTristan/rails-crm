@@ -12,15 +12,7 @@ Rails.application.routes.draw do
    get '/terms', to: 'terms#index'
    get '/faq', to: 'common_questions#index'
 
+  get '/dashboard', to: 'dashboard#index'
+
    resources :users
-   resources :tracker_projects, only:[:show]
-
-   resources :projects do
-     resources :tasks
-     resources :memberships, only: [:index, :create, :update, :destroy]
-   end
-
-   resources :tasks, only: [] do
-     resources :comments, only: [:create]
-   end
-end
+   resources :tasks
