@@ -13,17 +13,4 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
-  def project_member_verify(project)
-    self.memberships.find_by(project_id: project.id) != nil
-  end
-
-  def project_owner_verify(project)
-    self.admin || self.memberships.find_by(project_id: project.id).role == "Owner"
-  end
-
-  def project_member_of(user)
-    user.projects.map(&:users).flatten.include?(self)
-  end
-
-
 end
