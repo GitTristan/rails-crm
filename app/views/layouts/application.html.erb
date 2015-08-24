@@ -19,14 +19,14 @@
         </li>
         <li><a href="/users">Users</a></li>
       </ul>
-      <div class= 'pull-right'>
+      <div class='pull-right'>
         <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user), class: 'navbar-text' %>
         <%= link_to "Sign Out", sign_out_path, class: 'navbar-text' %>
       </div>
     </div>
   </nav>
 
-  <div class= 'container'>
+  <div class='container'>
     <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert alert-#{name}" %>
     <% end %>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <%= yield %>
-    </div>  
+    </div>
   </body>
 
   <footer class= 'container'>
